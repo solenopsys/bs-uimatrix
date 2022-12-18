@@ -1,0 +1,91 @@
+{
+  "projectType": "application",
+  "sourceRoot": "packages/fronts/ui/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "baseHref": "/",
+        "outputPath": "dist/packages/fronts/ui",
+        "index": "packages/fronts/ui/src/index.html",
+        "main": "packages/fronts/ui/src/main.ts",
+        "polyfills": "packages/fronts/ui/src/polyfills.ts",
+        "tsConfig": "packages/fronts/ui/tsconfig.app.json",
+        "assets": [
+          "packages/fronts/ui/src/favicon.ico",
+          "packages/fronts/ui/src/assets",
+          {
+            "input": "packages/uimatrix/templates/src/assets",
+            "glob": "**/*",
+            "output": "assets"
+          }
+        ],
+
+
+        "styles": ["packages/uimatrix/templates/src/assets/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "packages/fronts/ui/src/environments/environment.ts",
+              "with": "packages/fronts/ui/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "packages/fronts/ui/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+
+
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/fronts/ui/**/*.ts",
+          "packages/fronts/ui/**/*.html"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "packages/fronts/ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+
+  },
+  "tags": []
+}
