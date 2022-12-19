@@ -20,6 +20,11 @@
             "input": "packages/uimatrix/templates/src/assets",
             "glob": "**/*",
             "output": "assets"
+          },
+          {
+            "input": "packages/uimatrix/icons/src/assets",
+            "glob": "**/*",
+            "output": "assets"
           }
         ],
 
@@ -58,7 +63,10 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "customWebpackConfig": {
+            "path": "packages/fronts/ui/webpack.config.js"
+          }
         }
       },
       "defaultConfiguration": "development"

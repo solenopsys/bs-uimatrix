@@ -5,61 +5,14 @@
     "icon": "/assets/icons/12-Design/01-Design-Process/design-tool-layout.svg",
     "items": [
       {
-        "name": "Blockchain",
-        "link": "/exhibition/blockchain",
-        "icon": "/assets/icons/11-Content/02-Books/book-book-pages.svg"
-      },
-      {
-        "name": "Docs",
-        "link": "/exhibition/docs",
-        "icon": "/assets/icons/11-Content/02-Books/book-book-pages.svg"
-      },
-      {
-        "name": "Exhibition",
-        "link": "/exhibition/exhibition",
-        "icon": "/assets/icons/13-Images-Photography/05-Pictures/picture-stack-landscape.svg"
-      },
-      {
-        "name": "Themes",
-        "link": "/exhibition/themes",
-        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-painting-palette.svg",
-        "items": [
-          {
-            "name": "Icons",
-            "link": "/exhibition/themes/icons",
-            "icon": "/assets/icons/01-Interface-Essential/09-FaceID/face-id-8.svg"
-          },
-          {
-            "name": "Colors",
-            "link": "/exhibition/themes/colors",
-            "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg"
-          },
-          {
-            "name": "Sounds",
-            "link": "/exhibition/themes/sounds",
-            "icon": "/assets/icons/14-Music-Audio/17-Volume-Controls/volume-control-full.svg"
-          },
-          {
-            "name": "Typography",
-            "link": "/exhibition/themes/typography",
-            "icon": "/assets/icons/01-Interface-Essential/34-Text-Formating/small-caps.svg"
-          }
-        ]
-      },
-      {
-        "name": "Visualisations",
-        "link": "/exhibition/themes",
-        "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/pie-line-graph-desktop.svg",
+        "name": "Charts",
+        "link": "/charts",
+        "icon": "/assets/icons/06-Business-Products/12-Analytics/analytics-bars.svg",
         "items": [
           {
             "name": "Graph",
             "link": "/exhibition/graph",
             "icon": "/assets/icons/01-Interface-Essential/41-Hierachy-Organization/hierarchy-9.svg"
-          },
-          {
-            "name": "Charts",
-            "link": "/exhibition/charts",
-            "icon": "/assets/icons/06-Business-Products/12-Analytics/analytics-bars.svg"
           },
           {
             "name": "Path",
@@ -69,48 +22,36 @@
         ]
       },
       {
-        "name": "Structure",
-        "link": "/exhibition/structure",
-        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg",
-        "items": [
-          {
-            "name": "Layouts",
-            "link": "exhibition/structure/layouts",
-            "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/layout-dashboard-1.svg"
-          },
-          {
-            "name": "Grids",
-            "link": "exhibition/structure/grids",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-array.svg"
-          }
-        ]
-      },
-      {
-        "name": "Data",
-        "link": "/exhibition/data",
-        "icon": "/assets/icons/04-Programing-Apps-Websites/10-apps/monitor-graph.svg",
-        "items": [
-          {
-            "name": "Infinity",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/01-Interface-Essential/42-Multimedia-Controls/button-loop.svg"
-          },
-          {
-            "name": "Table",
-            "link": "exhibition/data/table",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-module.svg"
-          },
-          {
-            "name": "List",
-            "link": "exhibition/data/list",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-headline.svg"
-          }
-        ]
-      },
-      {
-        "name": "Navigations",
+        "name": "Controls",
         "link": "/exhibition/controls",
-        "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg",
+        "icon": "/assets/icons/03-Computers-Devices-Electronics/07-Tablets-Kindle/kindle-hold.svg"
+      },
+      {
+        "name": "Editors",
+        "link": "/exhibition/editors",
+        "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
+        "items": [
+          {
+            "name": "Element",
+            "link": "/exhibition/element",
+            "icon": "/assets/icons/03-Computers-Devices-Electronics/08-Microprocessor-Chips/computer-chip.svg"
+          }
+        ]
+      },
+      {
+        "name": "Forms",
+        "link": "/exhibition/forms",
+        "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg"
+      },
+      {
+        "name": "Icons",
+        "link": "/icons",
+        "icon": "/assets/icons/01-Interface-Essential/09-FaceID/face-id-8.svg"
+      },
+      {
+        "name": "Layouts",
+        "link": "exhibition/structure/layouts",
+        "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/layout-dashboard-1.svg",
         "items": [
           {
             "name": "Toolbar",
@@ -135,37 +76,63 @@
         ]
       },
       {
-        "name": "Controls",
-        "link": "/exhibition/controls",
-        "icon": "/assets/icons/03-Computers-Devices-Electronics/07-Tablets-Kindle/kindle-hold.svg",
+        "name": "Lists",
+        "link": "exhibition/structure/grids",
+        "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-array.svg",
         "items": [
           {
-            "name": "Forms",
-            "link": "/exhibition/forms",
-            "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg"
+            "name": "Infinity",
+            "link": "exhibition/data/infinity",
+            "icon": "/assets/icons/01-Interface-Essential/42-Multimedia-Controls/button-loop.svg"
           },
           {
-            "name": "Business",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/04-Programing-Apps-Websites/06-Website-Development/browser-page-text-2.svg",
-            "items": []
+            "name": "Table",
+            "link": "exhibition/data/table",
+            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-module.svg"
           },
           {
-            "name": "Industrial",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/01-Interface-Essential/49-Move/direction-button-2.svg"
+            "name": "List",
+            "link": "exhibition/data/list",
+            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-headline.svg"
           }
         ]
       },
       {
-        "name": "Editors",
-        "link": "/exhibition/editors",
-        "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
+        "name": "Modals",
+        "link": "/exhibition/themes",
+        "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/pie-line-graph-desktop.svg"
+      },
+      {
+        "name": "Publications",
+        "link": "/exhibition/structure",
+        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg",
+        "items": [
+        ]
+      },
+      {
+        "name": "Templates",
+        "link": "/exhibition/controls",
+        "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg"
+      },
+      {
+        "name": "Themes",
+        "link": "/exhibition/themes",
+        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-painting-palette.svg",
         "items": [
           {
-            "name": "Element",
-            "link": "/exhibition/element",
-            "icon": "/assets/icons/03-Computers-Devices-Electronics/08-Microprocessor-Chips/computer-chip.svg"
+            "name": "Colors",
+            "link": "/exhibition/themes/colors",
+            "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg"
+          },
+          {
+            "name": "Sounds",
+            "link": "/exhibition/themes/sounds",
+            "icon": "/assets/icons/14-Music-Audio/17-Volume-Controls/volume-control-full.svg"
+          },
+          {
+            "name": "Typography",
+            "link": "/exhibition/themes/typography",
+            "icon": "/assets/icons/01-Interface-Essential/34-Text-Formating/small-caps.svg"
           }
         ]
       }

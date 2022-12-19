@@ -37,10 +37,10 @@ module.exports = {
     },
   },
   plugins: [
-    iconPlug(
-      'packages/uimatrix/icons/src',
-      'dist/packages/fronts/ui',
-      'packages/fronts/ui/src/assets/menu.json'
-    ),
+    // iconPlug(
+    //   'packages/uimatrix/icons/src',
+    //   'dist/packages/fronts/ui',
+    //   'packages/fronts/ui/src/assets/menu.json'
+    // ),
   ],
 };

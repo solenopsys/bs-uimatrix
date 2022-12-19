@@ -30,7 +30,7 @@ import { ExhibitionListComponent } from "./exhibition-list/exhibition-list.compo
 import { ExhibitComponent } from "./exhibit/exhibit.component";
 import { environment } from "../environments/environment";
 import { BlockChainComponent } from "./block-chain/block-chain.component";
-import {FuiIconsModule} from "@solenopsys/uimatrix-icons";
+import {FuiIconsModule, ToolsIconsModule} from "@solenopsys/uimatrix-icons";
 import {ClusterState} from "@solenopsys/lib-clusters";
 
 const routes: Routes = [
@@ -50,11 +50,12 @@ export const PROVIDERS_CONF = [
   { provide: "assets_dir", useValue: "" },
   { provide: "mod_name", useValue: "exhibition" },
   { provide: 'single_start', useValue: true },
+  { provide: 'logo', useValue: "matrix" },
 ];
 
 export const IMPORTS_CONF = [
   RouterModule.forRoot([]),
-
+  ToolsIconsModule,
   HttpClientModule,
   BrowserModule,
   FuiGridModule,
