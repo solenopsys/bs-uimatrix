@@ -1,141 +1,69 @@
 [
   {
-    "name": "Exhibition",
-    "link": "/exhibition",
-    "icon": "/assets/icons/12-Design/01-Design-Process/design-tool-layout.svg",
-    "items": [
-      {
-        "name": "Charts",
-        "link": "/charts",
-        "icon": "/assets/icons/06-Business-Products/12-Analytics/analytics-bars.svg",
-        "items": [
-          {
-            "name": "Graph",
-            "link": "/exhibition/graph",
-            "icon": "/assets/icons/01-Interface-Essential/41-Hierachy-Organization/hierarchy-9.svg"
-          },
-          {
-            "name": "Path",
-            "link": "/exhibition/path",
-            "icon": "/assets/icons/06-Business-Products/04-Strategy/maze-strategy-1.svg"
-          }
-        ]
-      },
-      {
-        "name": "Controls",
-        "link": "/exhibition/controls",
-        "icon": "/assets/icons/03-Computers-Devices-Electronics/07-Tablets-Kindle/kindle-hold.svg"
-      },
-      {
-        "name": "Editors",
-        "link": "/exhibition/editors",
-        "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
-        "items": [
-          {
-            "name": "Element",
-            "link": "/exhibition/element",
-            "icon": "/assets/icons/03-Computers-Devices-Electronics/08-Microprocessor-Chips/computer-chip.svg"
-          }
-        ]
-      },
-      {
-        "name": "Forms",
-        "link": "/exhibition/forms",
-        "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg"
-      },
-      {
-        "name": "Icons",
-        "link": "/icons",
-        "icon": "/assets/icons/01-Interface-Essential/09-FaceID/face-id-8.svg"
-      },
-      {
-        "name": "Layouts",
-        "link": "exhibition/structure/layouts",
-        "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/layout-dashboard-1.svg",
-        "items": [
-          {
-            "name": "Toolbar",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-top.svg"
-          },
-          {
-            "name": "BreadCrumbs",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/48-Maps-Navigation/02-Maps/maps-mark.svg"
-          },
-          {
-            "name": "Tabs",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/11-Content/04-Archives/archive-folder.svg"
-          },
-          {
-            "name": "TreeMenu",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/01-Interface-Essential/41-Hierachy-Organization/hierarchy-5.svg"
-          }
-        ]
-      },
-      {
-        "name": "Lists",
-        "link": "exhibition/structure/grids",
-        "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-array.svg",
-        "items": [
-          {
-            "name": "Infinity",
-            "link": "exhibition/data/infinity",
-            "icon": "/assets/icons/01-Interface-Essential/42-Multimedia-Controls/button-loop.svg"
-          },
-          {
-            "name": "Table",
-            "link": "exhibition/data/table",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-module.svg"
-          },
-          {
-            "name": "List",
-            "link": "exhibition/data/list",
-            "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-headline.svg"
-          }
-        ]
-      },
-      {
-        "name": "Modals",
-        "link": "/exhibition/themes",
-        "icon": "/assets/icons/01-Interface-Essential/02-Dashboard/pie-line-graph-desktop.svg"
-      },
-      {
-        "name": "Publications",
-        "link": "/exhibition/structure",
-        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg",
-        "items": [
-        ]
-      },
-      {
-        "name": "Templates",
-        "link": "/exhibition/controls",
-        "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg"
-      },
-      {
-        "name": "Themes",
-        "link": "/exhibition/themes",
-        "icon": "/assets/icons/12-Design/05-Colors-Painting/color-painting-palette.svg",
-        "items": [
-          {
-            "name": "Colors",
-            "link": "/exhibition/themes/colors",
-            "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg"
-          },
-          {
-            "name": "Sounds",
-            "link": "/exhibition/themes/sounds",
-            "icon": "/assets/icons/14-Music-Audio/17-Volume-Controls/volume-control-full.svg"
-          },
-          {
-            "name": "Typography",
-            "link": "/exhibition/themes/typography",
-            "icon": "/assets/icons/01-Interface-Essential/34-Text-Formating/small-caps.svg"
-          }
-        ]
-      }
+    "name": "Charts",
+    "link": "/charts",
+    "icon": "/assets/icons/06-Business-Products/12-Analytics/analytics-bars.svg",
+    "submenus": []
+  },
+  {
+    "name": "Controls",
+    "link": "/controls",
+    "icon": "/assets/icons/03-Computers-Devices-Electronics/07-Tablets-Kindle/kindle-hold.svg",
+    "submenus": [
+      "/assets/stories/controls/"
     ]
+  },
+  {
+    "name": "Editors",
+    "link": "/editors",
+    "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
+    "submenus": [
+      "/assets/stories/editor-code/",
+      "/assets/stories/editor-content/",
+      "/assets/stories/editor-electronic/"
+    ]
+  },
+  {
+    "name": "Forms",
+    "link": "/forms",
+    "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg",
+    "submenus": [
+      "/assets/stories/forms/"
+    ]
+  },
+  {
+    "name": "Icons",
+    "link": "/icons",
+    "icon": "/assets/icons/01-Interface-Essential/09-FaceID/face-id-8.svg"
+  },
+  {
+    "name": "Layouts",
+    "link": "/layouts",
+    "icon": "/assets/icons/04-Programing-Apps-Websites/06-Website-Development/browser-page-layout.svg"
+  },
+  {
+    "name": "Lists",
+    "link": "/lists",
+    "icon": "/assets/icons/01-Interface-Essential/03-Menu/navigation-menu-1.svg"
+  },
+  {
+    "name": "Modals",
+    "link": "/modals",
+    "icon": "/assets/icons/11-Content/01-Content-Creation/content-browser-edit.svg"
+  },
+  {
+    "name": "Publications",
+    "link": "/publications",
+    "icon": "/assets/icons/11-Content/05-Newspapers/newspaper-fold.svg"
+  },
+  {
+    "name": "Templates",
+    "link": "/templates",
+    "icon": "/assets/icons/12-Design/01-Design-Process/design-tool-layout.svg"
+  },
+  {
+    "name": "Themes",
+    "link": "/themes",
+    "icon": "/assets/icons/12-Design/05-Colors-Painting/color-painting-palette.svg"
   }
 ]

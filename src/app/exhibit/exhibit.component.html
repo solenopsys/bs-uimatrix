@@ -1,7 +1,13 @@
-<div style="background-color:white;padding: 20px;margin: 20px;max-width: 1200px; box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.10);border-radius: 3px;">
-    <div style="font-size: 15px;font-weight: bolder;">{{name}}</div>
-    <div style="margin: 10px;  ">
-     Ok
-    </div>
+<ng-container *ngIf="data">
+    <div style="background-color:white;padding: 20px;margin: 20px;max-width: 1200px; box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.10);border-radius: 3px;">
+        <div style="font-size: 15px;font-weight: bolder;">{{data.name}}</div>
+        <div style="margin: 10px;  ">
+            {{data.description}}
+        </div>
+        <div #dynamicComponentContainer>
 
-</div>
+        </div>
+
+    </div>
+</ng-container>
+

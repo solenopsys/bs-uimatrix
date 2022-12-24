@@ -25,6 +25,67 @@
             "input": "packages/uimatrix/icons/src/assets",
             "glob": "**/*",
             "output": "assets"
+          },
+
+          {
+            "input": "packages/uimatrix/charts/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/charts"
+          },
+          {
+            "input": "packages/uimatrix/controls/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/controls"
+          },
+          {
+            "input": "packages/uimatrix/editors/code/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/editor-code"
+          },
+          {
+            "input": "packages/uimatrix/editors/content/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/editor-content"
+          },
+          {
+            "input": "packages/uimatrix/editors/electronic/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/editor-electronic"
+          },
+          {
+            "input": "packages/uimatrix/forms/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/forms"
+          },
+          {
+            "input": "packages/uimatrix/layouts/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/layouts"
+          },
+          {
+            "input": "packages/uimatrix/lists/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/lists"
+          },
+          {
+            "input": "packages/uimatrix/modals/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/modals"
+          },
+          {
+            "input": "packages/uimatrix/navigate/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/navigate"
+          },
+          {
+            "input": "packages/uimatrix/publications/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/publications"
+          },
+          {
+            "input": "packages/uimatrix/templates/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/templates"
           }
         ],
 

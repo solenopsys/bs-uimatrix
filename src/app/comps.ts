@@ -1,13 +1,14 @@
 import {Component, OnInit} from "@angular/core";
 import {DgraphDataProvider, DgraphService} from "@solenopsys/lib-dgraph";
-import {MenuItemData} from "@solenopsys/uimatrix-layouts";
+
 import {FilterCachedProvider, GraphItem, IdTitle, ProcessData} from "@solenopsys/uimatrix-controls";
 import {IdService} from "@solenopsys/lib-globals";
 import {TestDataBuffered, TIMES} from "./test.data";
+import { MenuItemData } from "@solenopsys/uimatrix-navigate";
 
 @Component({
   selector: 'app-exhibition-sub-menu',
-  template: '<fui-sub-menu [items]="subMenu"></fui-sub-menu>'
+  template: '<ui-sub-menu [items]="subMenu"></ui-sub-menu>'
 })
 export class ExhibitSubMenuComponent {
   subMenu: { key: string, title: string }[] = [
@@ -19,7 +20,7 @@ export class ExhibitSubMenuComponent {
 
 @Component({
   selector: 'app-exhibition-select-entity',
-  template: '<fui-sselect-enity [dataProvider]="dp" [(value)]="value"></fui-sselect-enity> - {{value}}'
+  template: '<ui-select [dataProvider]="dp" [(value)]="value"></ui-select> - {{value}}'
 })
 export class ExhibitSelectEntityComponent {
   dp: DgraphDataProvider;
@@ -34,14 +35,14 @@ export class ExhibitSelectEntityComponent {
 
 @Component({
   selector: 'app-exhibition-top-panel',
-  template: '<fui-top-pane></fui-top-pane>'
+  template: '<ui-top-pane></ui-top-pane>'
 })
 export class ExhibitTopPanelComponent {
 }
 
 @Component({
   selector: 'app-exhibition-tree',
-  template: '<fui-smenu [data]="menu"></fui-smenu>'
+  template: '<ui-menu [data]="menu"></ui-menu>'
 })
 export class ExhibitTreeComponent {
 
@@ -64,8 +65,8 @@ export const TEST_PROCESSES: ProcessData[] = [
 
 
 @Component({
-  selector: 'app-exhibition-free-select-save',
-  template: '  {{value}}<br> <fui-free-select-save [dataProvider]="dp" [(value)]="value" (save)="save($event)"></fui-free-select-save> '
+  selector: 'app-exhibition-select-save',
+  template: '  {{value}}<br> <ui-select-save [dataProvider]="dp" [(value)]="value" (save)="save($event)"></ui-select-save> '
 })
 export class ExhibitFreeSelectSaveComponent {
   dp: FilterCachedProvider;
@@ -87,8 +88,8 @@ export class ExhibitFreeSelectSaveComponent {
 }
 
 @Component({
-  selector: 'app-exhibition-free-select',
-  template: '  {{value}}<br> <fui-free-select [dataProvider]="dp" [(value)]="value"></fui-free-select> '
+  selector: 'app-exhibition-select',
+  template: '  {{value}}<br> <ui-select [dataProvider]="dp" [(value)]="value"></ui-select> '
 })
 export class ExhibitFreeSelectComponent {
   dp: FilterCachedProvider;
@@ -108,7 +109,7 @@ export class ExhibitFreeSelectComponent {
 
 @Component({
   selector: 'app-exhibition-modall',
-  template: '<fui-modal></fui-modal>'
+  template: '<ui-modal></ui-modal>'
 })
 export class ExhibitModalComponent {
 }
@@ -116,9 +117,9 @@ export class ExhibitModalComponent {
 
 @Component({
   selector: 'app-exhibition-icon-button',
-  template: ' <fui-icon-button (click)="show=true"\n' +
+  template: ' <ui-icon-button (click)="show=true"\n' +
     '                          [icon]="\'/assets/icons/01-Interface-Essential/03-Menu/navigation-menu-1.svg\'"\n' +
-    '                          [title]="\'Menu\'" ></fui-icon-button> <div *ngIf="show">click ok</div>'
+    '                          [title]="\'Menu\'" ></ui-icon-button> <div *ngIf="show">click ok</div>'
 })
 export class ExhibitIconButtonComponent {
   show = false;
@@ -126,7 +127,7 @@ export class ExhibitIconButtonComponent {
 
 @Component({
   selector: 'app-exhibition-path-tree',
-  template: '<fui-path-tree [items]="items" [rootIds]="[\'0\',\'1\']"></fui-path-tree>',
+  template: '<ui-path-tree [items]="items" [rootIds]="[\'0\',\'1\']"></ui-path-tree>',
 })
 export class ExhibitPathTreeComponent implements OnInit {
 
@@ -149,7 +150,7 @@ export class ExhibitPathTreeComponent implements OnInit {
 
 @Component({
   selector: 'app-exhibition-infinity-table',
-  template: '<fui-sinfinity-table [key]="tableKey" ></fui-sinfinity-table>'
+  template: '<ui-infinity-table [key]="tableKey" ></ui-infinity-table>'
 })
 export class ExhibitInfinityTableComponent {
   fields = TIMES.fields;

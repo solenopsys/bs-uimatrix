@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Graph",
+    "link": "/exhibition/graph",
+    "icon": "/assets/icons/01-Interface-Essential/41-Hierachy-Organization/hierarchy-9.svg"
+  },
+  {
+    "name": "Path",
+    "link": "/exhibition/path",
+    "icon": "/assets/icons/06-Business-Products/04-Strategy/maze-strategy-1.svg"
+  },
+  {
+    "name": "Element",
+    "link": "/exhibition/element",
+    "icon": "/assets/icons/03-Computers-Devices-Electronics/08-Microprocessor-Chips/computer-chip.svg"
+  },
+  {
+    "name": "Toolbar",
+    "link": "exhibition/data/infinity",
+    "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-top.svg"
+  },
+  {
+    "name": "BreadCrumbs",
+    "link": "exhibition/data/infinity",
+    "icon": "/assets/icons/48-Maps-Navigation/02-Maps/maps-mark.svg"
+  },
+  {
+    "name": "Tabs",
+    "link": "exhibition/data/infinity",
+    "icon": "/assets/icons/11-Content/04-Archives/archive-folder.svg"
+  },
+  {
+    "name": "TreeMenu",
+    "link": "exhibition/data/infinity",
+    "icon": "/assets/icons/01-Interface-Essential/41-Hierachy-Organization/hierarchy-5.svg"
+  },
+  {
+    "name": "Infinity",
+    "link": "exhibition/data/infinity",
+    "icon": "/assets/icons/01-Interface-Essential/42-Multimedia-Controls/button-loop.svg"
+  },
+  {
+    "name": "Table",
+    "link": "exhibition/data/table",
+    "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-module.svg"
+  },
+  {
+    "name": "List",
+    "link": "exhibition/data/list",
+    "icon": "/assets/icons/01-Interface-Essential/38-Layouts/layout-headline.svg"
+  },
+  {
+    "name": "Colors",
+    "link": "/exhibition/themes/colors",
+    "icon": "/assets/icons/12-Design/05-Colors-Painting/color-palette-sample-1.svg"
+  },
+  {
+    "name": "Sounds",
+    "link": "/exhibition/themes/sounds",
+    "icon": "/assets/icons/14-Music-Audio/17-Volume-Controls/volume-control-full.svg"
+  },
+  {
+    "name": "Typography",
+    "link": "/exhibition/themes/typography",
+    "icon": "/assets/icons/01-Interface-Essential/34-Text-Formating/small-caps.svg"
+  }
+]
