@@ -5,7 +5,7 @@ import {BootstrapComponent, GridState, UITemplatesModule} from "@solenopsys/uima
 import {createNgxs} from "@solenopsys/lib-storage";
 import {RowsState, UIListsModule} from "@solenopsys/uimatrix-lists";
 import {CommonModule} from "@angular/common";
-import {TextPageComponent, UIEditorModule} from "@solenopsys/uimatrix-editor-content";
+import {TextPageComponent, UIContentEditorModule} from "@solenopsys/uimatrix-editor-content";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
@@ -26,27 +26,39 @@ import {ExhibitionListComponent} from "./exhibition-list/exhibition-list.compone
 import {ExhibitComponent} from "./exhibit/exhibit.component";
 import {environment} from "../environments/environment";
 import {BlockChainComponent} from "./block-chain/block-chain.component";
-import {ToolsIconsModule, UIIconsModule} from "@solenopsys/uimatrix-icons";
+import {UIIconsModule} from "@solenopsys/uimatrix-icons";
 import {ClusterState} from "@solenopsys/lib-clusters";
 import {BehaviorSubject, firstValueFrom, Subject} from "rxjs";
 import {UIControlsModule} from "@solenopsys/uimatrix-controls";
 import {UIModalsModule} from "@solenopsys/uimatrix-modals";
 import {UIFormsModule} from "@solenopsys/uimatrix-forms";
 import {UINavigateModule} from "@solenopsys/uimatrix-navigate";
+import {UIChartsModule} from "@solenopsys/uimatrix-charts";
+import {UICodeEditorModule} from "@solenopsys/uimatrix-code-content";
+import {UIElectronicEditorModule} from "@solenopsys/uimatrix-editor-electronic";
 
 const routes: Routes = [
 
-    {path: "docs", component: TextPageComponent, data: {uid: "0x3d223"}},
-    {path: "blockchain", component: BlockChainComponent},
+    // {path: "docs", component: TextPageComponent, data: {uid: "0x3d223"}},
+    // {path: "blockchain", component: BlockChainComponent},
     {
-        path: "", component: ExhibitionListComponent,
+        path: "components", component: ExhibitionListComponent,
         children: [{
             path: "**", component: ExhibitComponent
         }]
     }
 ];
 
-const $menu = new Subject()
+const menu$ = new Subject()
+const tabs$ = new Subject<{ id: string, title: string }[]>();
+
+setTimeout(() => {
+    tabs$.next([
+        {id: "components", title: "Components"},
+        {id: "icons", title: "Icons"},
+        {id: "themes", title: "Themes"}
+        ,])
+})
 
 
 export const PROVIDERS_CONF = [
@@ -54,7 +66,8 @@ export const PROVIDERS_CONF = [
     {provide: "mod_name", useValue: "exhibition"},
     {provide: 'single_start', useValue: true},
     {provide: 'logo', useValue: "matrix"},
-    {provide: 'menu', useValue: $menu.asObservable()},
+    {provide: 'menu', useValue: menu$.asObservable()},
+    {provide: 'tabs', useValue: tabs$.asObservable()},
 ];
 
 
@@ -71,7 +84,11 @@ export const PROVIDERS_CONF = [
         UIIconsModule,
         UIModalsModule,
         UITemplatesModule,
-        UIEditorModule,
+        UIChartsModule,
+        UICodeEditorModule,
+        UIElectronicEditorModule,
+        UIContentEditorModule,
+
         RouterModule.forRoot(routes),
         ...createNgxs(!environment.production, [ClusterState, GridState, RowsState,], true),
     ],
@@ -116,7 +133,7 @@ async function loadMenu(http: HttpClient) {
         }
         Promise.all(jobs).then(result => {
             console.log("MENU AFTER LOAD", JSON.stringify(menuItems));
-            $menu.next(menuItems);
+            menu$.next(menuItems);
             URL_MAPPING_SUBJECT.next(URL_MAPPING)
         })
     })

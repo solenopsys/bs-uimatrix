@@ -1,20 +1,26 @@
-import {Component, OnInit} from "@angular/core";
-import {ButtonComponent} from "@solenopsys/uimatrix-forms";
-import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
+import {Component, OnDestroy, OnInit} from "@angular/core";
+import {NavigationEnd, Router} from '@angular/router';
 import {URL_MAPPING_SUBJECT} from "../app.module";
 import {Location} from '@angular/common';
-import {filter, firstValueFrom, map, Observable, of, switchMap, tap} from "rxjs";
+import {filter, firstValueFrom, map, Observable, Subject, Subscription, switchMap, tap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import * as json5 from 'json5';
+
 
 @Component({
     selector: "app-exhibition-list",
     templateUrl: "./exhibition-list.component.html",
     styleUrls: ["./exhibition-list.component.css"]
 })
-export class ExhibitionListComponent implements OnInit {
-    stories$: Observable<any>;
+export class ExhibitionListComponent implements OnInit, OnDestroy {
+    config$: Observable<any>;
 
-    constructor(private location: Location, private http: HttpClient ,private router: Router) {
+    events$ = new Subject<string>()
+    events: string[] = [];
+
+    private subscription: Subscription
+
+    constructor(private location: Location, private http: HttpClient, private router: Router) {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
                 let currentUrl = this.location.path();
@@ -22,23 +28,38 @@ export class ExhibitionListComponent implements OnInit {
 
                 const name = currentUrl.split("/").pop()
                 console.log("NAME ", name)
-                this.stories$ = URL_MAPPING_SUBJECT.asObservable().pipe(filter(val => val != undefined)).pipe(
-                    switchMap(MAPPING => {
-                        let parent = MAPPING[currentUrl];
+                this.config$ = URL_MAPPING_SUBJECT.asObservable().pipe(filter(val => val != undefined))
+                    .pipe(
+                        switchMap(MAPPING => {
+                            console.log("PRINT MAPPING", MAPPING)
+                            let parent = MAPPING[currentUrl]; // stories/charts
 
-                        let url = parent + "components/" + name + ".json";
-                        console.log("PARENT ", url)
-                        return firstValueFrom(this.http.get<any>(url))
-                    })
-                ).pipe(tap(item => console.log("LOG", item)))
+                            let url = parent + "components/" + name + ".json5";
+                            console.log("PARENT ", url)
+                            return firstValueFrom(this.http.get<string>(url, {
+                                //@ts-ignore
+                                responseType: 'text'
+                            }).pipe(
+                                //@ts-ignore
+                                map((t: string) => json5.parse(t))));
+
+
+                        })
+                    )
+                    .pipe(tap(item => console.log("LOG", item)))
             }
         });
+
+
     }
 
     ngOnInit(): void {
+        this.subscription = this.events$.asObservable().subscribe(event => this.events.push(event));
 
+    }
 
-
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
     }
 
 }

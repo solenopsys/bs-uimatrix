@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "baseHref": "/",
         "outputPath": "dist/packages/fronts/ui",
@@ -26,7 +28,6 @@
             "glob": "**/*",
             "output": "assets"
           },
-
           {
             "input": "packages/uimatrix/charts/src/stories",
             "glob": "**/*",
@@ -88,9 +89,9 @@
             "output": "assets/stories/templates"
           }
         ],
-
-
-        "styles": ["packages/uimatrix/templates/src/assets/styles.css"],
+        "styles": [
+          "packages/uimatrix/templates/src/assets/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -132,8 +133,6 @@
       },
       "defaultConfiguration": "development"
     },
-
-
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
@@ -142,7 +141,9 @@
           "packages/fronts/ui/**/*.html"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
@@ -154,7 +155,6 @@
         "passWithNoTests": true
       }
     }
-
   },
   "tags": []
 }

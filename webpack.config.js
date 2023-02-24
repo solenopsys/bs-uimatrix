@@ -1,7 +1,5 @@
-
-
 const path = require('path');
-const { iconPlug } = require("../../scripts/icons");
+const {iconPlug} = require("../../scripts/icons");
 
 
 /**
@@ -14,33 +12,31 @@ const { iconPlug } = require("../../scripts/icons");
  * the location of the generated temporary tsconfig file.
  */
 const tsConfigPath =
-  process.env.NX_TSCONFIG_PATH ??
-  path.join(__dirname, '../../tsconfig.base.json');
+    process.env.NX_TSCONFIG_PATH ??
+    path.join(__dirname, '../../tsconfig.base.json');
 
 const workspaceRootPath = path.join(__dirname, '../../');
 
 
 module.exports = {
-  output: {
-    uniqueName: 'ci',
-    publicPath: 'auto',
-  },
-  optimization: {
-    runtimeChunk: false,
-  },
-  experiments: {
-    outputModule: true,
-  },
-  resolve: {
-    alias: {
-
+    output: {
+        uniqueName: 'ci',
+        publicPath: 'auto',
     },
-  },
-  plugins: [
-    // iconPlug(
-    //   'packages/uimatrix/icons/src',
-    //   'dist/packages/fronts/ui',
-    //   'packages/fronts/ui/src/assets/menu.json'
-    // ),
-  ],
+    optimization: {
+        runtimeChunk: false,
+    },
+    experiments: {
+        outputModule: true,
+    },
+    resolve: {
+        alias: {},
+    },
+    plugins: [
+        // iconPlug(
+        //   'packages/uimatrix/icons/src',
+        //   'dist/packages/fronts/ui',
+        //   'packages/fronts/ui/src/assets/menu.json'
+        // ),
+    ],
 };

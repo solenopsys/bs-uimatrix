@@ -1,13 +1,15 @@
 [
   {
     "name": "Charts",
-    "link": "/charts",
+    "link": "/components/charts",
     "icon": "/assets/icons/06-Business-Products/12-Analytics/analytics-bars.svg",
-    "submenus": []
+    "submenus": [
+      "/assets/stories/charts/"
+    ]
   },
   {
     "name": "Controls",
-    "link": "/controls",
+    "link": "/components/controls",
     "icon": "/assets/icons/03-Computers-Devices-Electronics/07-Tablets-Kindle/kindle-hold.svg",
     "submenus": [
       "/assets/stories/controls/"
@@ -15,7 +17,7 @@
   },
   {
     "name": "Editors",
-    "link": "/editors",
+    "link": "/components/editors",
     "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
     "submenus": [
       "/assets/stories/editor-code/",
@@ -25,45 +27,55 @@
   },
   {
     "name": "Forms",
-    "link": "/forms",
+    "link": "/components/forms",
     "icon": "/assets/icons/01-Interface-Essential/32-Form-edition/typing.svg",
     "submenus": [
       "/assets/stories/forms/"
     ]
   },
   {
-    "name": "Icons",
-    "link": "/icons",
-    "icon": "/assets/icons/01-Interface-Essential/09-FaceID/face-id-8.svg"
+    "name": "Layouts",
+    "link": "/components/layouts",
+    "icon": "/assets/icons/04-Programing-Apps-Websites/06-Website-Development/browser-page-layout.svg",
+    "submenus": [
+      "/assets/stories/layouts/"
+    ]
   },
   {
-    "name": "Layouts",
-    "link": "/layouts",
-    "icon": "/assets/icons/04-Programing-Apps-Websites/06-Website-Development/browser-page-layout.svg"
+    "name": "Navigate",
+    "link": "/components/navigate",
+    "icon": "/assets/icons/48-Maps-Navigation/02-Maps/maps-mark.svg",
+    "submenus": [
+      "/assets/stories/navigate/"
+    ]
   },
   {
     "name": "Lists",
-    "link": "/lists",
-    "icon": "/assets/icons/01-Interface-Essential/03-Menu/navigation-menu-1.svg"
+    "link": "/components/lists",
+    "icon": "/assets/icons/01-Interface-Essential/03-Menu/navigation-menu-1.svg",
+    "submenus": [
+      "/assets/stories/lists/"
+    ]
   },
   {
     "name": "Modals",
-    "link": "/modals",
-    "icon": "/assets/icons/11-Content/01-Content-Creation/content-browser-edit.svg"
+    "link": "/components/modals",
+    "icon": "/assets/icons/11-Content/01-Content-Creation/content-browser-edit.svg",
+    "submenus": [
+      "/assets/stories/modals/"
+    ]
   },
   {
     "name": "Publications",
-    "link": "/publications",
+    "link": "/components/publications",
     "icon": "/assets/icons/11-Content/05-Newspapers/newspaper-fold.svg"
   },
   {
     "name": "Templates",
-    "link": "/templates",
-    "icon": "/assets/icons/12-Design/01-Design-Process/design-tool-layout.svg"
-  },
-  {
-    "name": "Themes",
-    "link": "/themes",
-    "icon": "/assets/icons/12-Design/05-Colors-Painting/color-painting-palette.svg"
+    "link": "/components/templates",
+    "icon": "/assets/icons/12-Design/01-Design-Process/design-tool-layout.svg",
+    "submenus": [
+      "/assets/stories/templates/"
+    ]
   }
 ]
