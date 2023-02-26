@@ -1,11 +1,11 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule, Routes} from "@angular/router";
-import {BootstrapComponent, GridState, UITemplatesModule} from "@solenopsys/uimatrix-templates";
+import {BootstrapComponent, GridState, UITemplatesModule} from "@solenopsys/ui-templates";
 import {createNgxs} from "@solenopsys/lib-storage";
-import {RowsState, UIListsModule} from "@solenopsys/uimatrix-lists";
+import {RowsState, UIListsModule} from "@solenopsys/ui-lists";
 import {CommonModule} from "@angular/common";
-import {TextPageComponent, UIContentEditorModule} from "@solenopsys/uimatrix-editor-content";
+import {TextPageComponent, UIContentEditorModule} from "@solenopsys/ui-editor-content";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
@@ -26,16 +26,16 @@ import {ExhibitionListComponent} from "./exhibition-list/exhibition-list.compone
 import {ExhibitComponent} from "./exhibit/exhibit.component";
 import {environment} from "../environments/environment";
 import {BlockChainComponent} from "./block-chain/block-chain.component";
-import {UIIconsModule} from "@solenopsys/uimatrix-icons";
+import {UIIconsModule} from "@solenopsys/ui-icons";
 import {ClusterState} from "@solenopsys/lib-clusters";
 import {BehaviorSubject, firstValueFrom, Subject} from "rxjs";
-import {UIControlsModule} from "@solenopsys/uimatrix-controls";
-import {UIModalsModule} from "@solenopsys/uimatrix-modals";
-import {UIFormsModule} from "@solenopsys/uimatrix-forms";
-import {UINavigateModule} from "@solenopsys/uimatrix-navigate";
-import {UIChartsModule} from "@solenopsys/uimatrix-charts";
-import {UICodeEditorModule} from "@solenopsys/uimatrix-code-content";
-import {UIElectronicEditorModule} from "@solenopsys/uimatrix-editor-electronic";
+import {UIControlsModule} from "@solenopsys/ui-controls";
+import {UIModalsModule} from "@solenopsys/ui-modals";
+import {UIFormsModule} from "@solenopsys/ui-forms";
+import {UINavigateModule} from "@solenopsys/ui-navigate";
+import {UIChartsModule} from "@solenopsys/ui-charts";
+import {UICodeEditorModule} from "@solenopsys/ui-code-content";
+import {UIElectronicEditorModule} from "@solenopsys/ui-editor-electronic";
 
 const routes: Routes = [
 

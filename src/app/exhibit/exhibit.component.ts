@@ -1,6 +1,6 @@
 import {Component, ComponentFactoryResolver, Input, ViewChild, ViewContainerRef} from "@angular/core";
 
-import {DeclaredService} from "@solenopsys/uimatrix-utils";
+import {DeclaredService} from "@solenopsys/ui-utils";
 import {BehaviorSubject, Subject} from "rxjs";
 
 @Component({

@@ -34,7 +34,7 @@ module.exports = {
     },
     plugins: [
         // iconPlug(
-        //   'packages/uimatrix/icons/src',
+        //   'packages/uimatrix/ui-icons/src',
         //   'dist/packages/fronts/ui',
         //   'packages/fronts/ui/src/assets/menu.json'
         // ),
