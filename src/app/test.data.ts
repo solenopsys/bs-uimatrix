@@ -1,4 +1,4 @@
-import {DataListInterface, DataPageConfig, DgraphDataBuffered, FieldType} from "@solenopsys/lib-dgraph";
+import {DataListInterface, DataPageConfig, DgraphDataBuffered, FieldType} from "@solenopsys/fl-dgraph";
 
 
 export class TestDataBuffered implements DataListInterface {

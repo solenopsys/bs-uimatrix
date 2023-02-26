@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
-import {DgraphDataProvider, DgraphService} from "@solenopsys/lib-dgraph";
+import {DgraphDataProvider, DgraphService} from "@solenopsys/fl-dgraph";
 
 import {FilterCachedProvider, GraphItem, IdTitle, ProcessData} from "@solenopsys/ui-controls";
-import {IdService} from "@solenopsys/lib-globals";
+import {IdService} from "@solenopsys/fl-globals";
 import {TestDataBuffered, TIMES} from "./test.data";
 import {MenuItemData} from "@solenopsys/ui-navigate";
 
