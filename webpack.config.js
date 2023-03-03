@@ -1,5 +1,5 @@
 const path = require('path');
-const {iconPlug} = require("../../scripts/icons");
+const {iconPlug} = require("../../icons");
 
 
 /**
@@ -34,9 +34,9 @@ module.exports = {
     },
     plugins: [
         // iconPlug(
-        //   'packages/uimatrix/ui-icons/src',
+        //   'packages/fr-uimatrix/ui-icons/src',
         //   'dist/packages/fronts/ui',
-        //   'packages/fronts/ui/src/assets/menu.json'
+        //   'packages/fronts/fr-uimatrix/src/assets/menu.json'
         // ),
     ],
 };

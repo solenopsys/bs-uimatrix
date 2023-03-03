@@ -1,5 +1,5 @@
 {
-  "name": "@solenopsys/uimatrix",
+  "name": "@solenopsys/fr-uimatrix",
   "version": "0.1.1",
   "scripts": {
     "test": "node index.js",

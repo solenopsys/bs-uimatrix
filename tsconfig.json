@@ -13,13 +13,13 @@
   "include": [],
   "references": [
     {
-      "path": ".packages/fronts/ui/tsconfig.app.json"
+      "path": ".packages/fronts/fr-uimatrix/tsconfig.app.json"
     },
     {
-      "path": "packages/fronts/ui/tsconfig.spec.json"
+      "path": "packages/fronts/fr-uimatrix/tsconfig.spec.json"
     },
     {
-      "path": "packages/fronts/ui/tsconfig.editor.json"
+      "path": "packages/fronts/fr-uimatrix/tsconfig.editor.json"
     }
   ],
   "extends": "../../../tsconfig.base.json",

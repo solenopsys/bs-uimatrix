@@ -33,6 +33,7 @@ export class ExhibitComponent {
                 const componentRef = this.entry.createComponent(factory);
                 for (const key in this.story.params) {
                     if (this.config.io[key]['type'] === "class") {
+                        //@ts-ignore
                         const makeObject = this.ds.makeObject(this.story.params[key]);
                         makeObject.setData(this.story.data);
                         componentRef.instance[key] = makeObject;

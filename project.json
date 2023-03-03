@@ -1,6 +1,6 @@
 {
   "projectType": "application",
-  "sourceRoot": "packages/fronts/ui/src",
+  "sourceRoot": "packages/fronts/fr-uimatrix/src",
   "prefix": "app",
   "targets": {
     "build": {
@@ -11,80 +11,80 @@
       "options": {
         "baseHref": "/",
         "outputPath": "dist/packages/fronts/ui",
-        "index": "packages/fronts/ui/src/index.html",
-        "main": "packages/fronts/ui/src/main.ts",
-        "polyfills": "packages/fronts/ui/src/polyfills.ts",
-        "tsConfig": "packages/fronts/ui/tsconfig.app.json",
+        "index": "packages/fronts/fr-uimatrix/src/index.html",
+        "main": "packages/fronts/fr-uimatrix/src/main.ts",
+        "polyfills": "packages/fronts/fr-uimatrix/src/polyfills.ts",
+        "tsConfig": "packages/fronts/fr-uimatrix/tsconfig.app.json",
         "assets": [
-          "packages/fronts/ui/src/favicon.ico",
-          "packages/fronts/ui/src/assets",
+          "packages/fronts/fr-uimatrix/src/favicon.ico",
+          "packages/fronts/fr-uimatrix/src/assets",
           {
-            "input": "packages/uimatrix/ui-templates/src/assets",
+            "input": "packages/fr-uimatrix/ui-templates/src/assets",
             "glob": "**/*",
             "output": "assets"
           },
           {
-            "input": "packages/uimatrix/ui-icons/src/assets",
+            "input": "packages/fr-uimatrix/ui-icons/src/assets",
             "glob": "**/*",
             "output": "assets"
           },
           {
-            "input": "packages/uimatrix/ui-charts/src/stories",
+            "input": "packages/fr-uimatrix/ui-charts/src/stories",
             "glob": "**/*",
             "output": "assets/stories/charts"
           },
           {
-            "input": "packages/uimatrix/ui-controls/src/stories",
+            "input": "packages/fr-uimatrix/ui-controls/src/stories",
             "glob": "**/*",
             "output": "assets/stories/controls"
           },
           {
-            "input": "packages/uimatrix/ui-editors/code/src/stories",
+            "input": "packages/fr-uimatrix/ui-editors/code/src/stories",
             "glob": "**/*",
             "output": "assets/stories/editor-code"
           },
           {
-            "input": "packages/uimatrix/ui-editors/content/src/stories",
+            "input": "packages/fr-uimatrix/ui-editors/content/src/stories",
             "glob": "**/*",
             "output": "assets/stories/editor-content"
           },
           {
-            "input": "packages/uimatrix/ui-editors/electronic/src/stories",
+            "input": "packages/fr-uimatrix/ui-editors/electronic/src/stories",
             "glob": "**/*",
             "output": "assets/stories/editor-electronic"
           },
           {
-            "input": "packages/uimatrix/ui-forms/src/stories",
+            "input": "packages/fr-uimatrix/ui-forms/src/stories",
             "glob": "**/*",
             "output": "assets/stories/forms"
           },
           {
-            "input": "packages/uimatrix/ui-layouts/src/stories",
+            "input": "packages/fr-uimatrix/ui-layouts/src/stories",
             "glob": "**/*",
             "output": "assets/stories/layouts"
           },
           {
-            "input": "packages/uimatrix/ui-lists/src/stories",
+            "input": "packages/fr-uimatrix/ui-lists/src/stories",
             "glob": "**/*",
             "output": "assets/stories/lists"
           },
           {
-            "input": "packages/uimatrix/ui-modals/src/stories",
+            "input": "packages/fr-uimatrix/ui-modals/src/stories",
             "glob": "**/*",
             "output": "assets/stories/modals"
           },
           {
-            "input": "packages/uimatrix/ui-navigate/src/stories",
+            "input": "packages/fr-uimatrix/ui-navigate/src/stories",
             "glob": "**/*",
             "output": "assets/stories/navigate"
           },
           {
-            "input": "packages/uimatrix/ui-publications/src/stories",
+            "input": "packages/fr-uimatrix/ui-publications/src/stories",
             "glob": "**/*",
             "output": "assets/stories/publications"
           },
           {
-            "input": "packages/uimatrix/ui-templates/src/stories",
+            "input": "packages/fr-uimatrix/ui-templates/src/stories",
             "glob": "**/*",
             "output": "assets/stories/templates"
           }
@@ -110,13 +110,13 @@
           ],
           "fileReplacements": [
             {
-              "replace": "packages/fronts/ui/src/environments/environment.ts",
-              "with": "packages/fronts/ui/src/environments/environment.prod.ts"
+              "replace": "packages/fronts/fr-uimatrix/src/environments/environment.ts",
+              "with": "packages/fronts/fr-uimatrix/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "packages/fronts/ui/webpack.prod.config.js"
+            "path": "packages/fronts/fr-uimatrix/webpack.prod.config.js"
           }
         },
         "development": {
@@ -127,8 +127,20 @@
           "sourceMap": true,
           "namedChunks": true,
           "customWebpackConfig": {
-            "path": "packages/fronts/ui/webpack.config.js"
+            "path": "packages/fronts/fr-uimatrix/webpack.config.js"
           }
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "fr-uimatrix:build:production"
+        },
+        "development": {
+          "browserTarget": "fr-uimatrix:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -137,8 +149,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/fronts/ui/**/*.ts",
-          "packages/fronts/ui/**/*.html"
+          "packages/fronts/fr-uimatrix/**/*.ts",
+          "packages/fronts/fr-uimatrix/**/*.html"
         ]
       },
       "outputs": [
@@ -151,7 +163,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "packages/fronts/ui/jest.config.ts",
+        "jestConfig": "packages/fronts/fr-uimatrix/jest.config.ts",
         "passWithNoTests": true
       }
     }

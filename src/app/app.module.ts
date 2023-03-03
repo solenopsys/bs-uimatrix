@@ -5,7 +5,6 @@ import {BootstrapComponent, GridState, UITemplatesModule} from "@solenopsys/ui-t
 import {createNgxs} from "@solenopsys/fl-storage";
 import {RowsState, UIListsModule} from "@solenopsys/ui-lists";
 import {CommonModule} from "@angular/common";
-import {TextPageComponent, UIContentEditorModule} from "@solenopsys/ui-editor-content";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
@@ -34,8 +33,6 @@ import {UIModalsModule} from "@solenopsys/ui-modals";
 import {UIFormsModule} from "@solenopsys/ui-forms";
 import {UINavigateModule} from "@solenopsys/ui-navigate";
 import {UIChartsModule} from "@solenopsys/ui-charts";
-import {UICodeEditorModule} from "@solenopsys/ui-code-content";
-import {UIElectronicEditorModule} from "@solenopsys/ui-editor-electronic";
 
 const routes: Routes = [
 
@@ -85,10 +82,6 @@ export const PROVIDERS_CONF = [
         UIModalsModule,
         UITemplatesModule,
         UIChartsModule,
-        UICodeEditorModule,
-        UIElectronicEditorModule,
-        UIContentEditorModule,
-
         RouterModule.forRoot(routes),
         ...createNgxs(!environment.production, [ClusterState, GridState, RowsState,], true),
     ],
