@@ -10,7 +10,7 @@
       ],
       "options": {
         "baseHref": "/",
-        "outputPath": "dist/packages/fronts/ui",
+        "outputPath": "dist/fronts/fr-uimatrix",
         "index": "packages/fronts/fr-uimatrix/src/index.html",
         "main": "packages/fronts/fr-uimatrix/src/main.ts",
         "polyfills": "packages/fronts/fr-uimatrix/src/polyfills.ts",
