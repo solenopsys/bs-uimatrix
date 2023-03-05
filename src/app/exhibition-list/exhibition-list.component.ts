@@ -23,7 +23,7 @@ export class ExhibitionListComponent implements OnInit, OnDestroy {
     constructor(private location: Location, private http: HttpClient, private router: Router) {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
-                let currentUrl = this.location.path();
+                const currentUrl = this.location.path();
                 console.log("CONSTRUCTOR ", currentUrl)
 
                 const name = currentUrl.split("/").pop()
@@ -32,18 +32,16 @@ export class ExhibitionListComponent implements OnInit, OnDestroy {
                     .pipe(
                         switchMap(MAPPING => {
                             console.log("PRINT MAPPING", MAPPING)
-                            let parent = MAPPING[currentUrl]; // stories/charts
+                            const parent = MAPPING[currentUrl]; // stories/charts
 
-                            let url = parent + "components/" + name + ".json5";
+                            const url = parent + "components/" + name + ".json5";
                             console.log("PARENT ", url)
                             return firstValueFrom(this.http.get<string>(url, {
-                                //@ts-ignore
+                                // @ts-ignore
                                 responseType: 'text'
                             }).pipe(
-                                //@ts-ignore
-                                map((t: string) => json5.parse(t))));
-
-
+                                // @ts-ignore
+                                map((t: string) => json5.parse(t))))
                         })
                     )
                     .pipe(tap(item => console.log("LOG", item)))
