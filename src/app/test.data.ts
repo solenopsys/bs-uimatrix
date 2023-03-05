@@ -2,7 +2,7 @@ import {DataListInterface, DataPageConfig, DgraphDataBuffered, FieldType} from "
 
 
 export class TestDataBuffered implements DataListInterface {
-    items = [{uid: '0x9c60', 'rom.time': 10, description: 'Добавление 1поставщиков', date: '2021-03-24T00:00:00Z'},
+    items = [{uid: '0x9c60', 'rom.time': 10, description: 'Add items', date: '2021-03-24T00:00:00Z'},
         {uid: '0xc369', 'rom.time': 28, description: 'Загрузка старой базы ресурсов', date: '2021-03-25T00:00:00Z'},
         {uid: '0xc36a', 'rom.time': 28, description: 'Загрузка старой базы ресурсов ', date: '2021-03-24T00:00:00Z'},
         {uid: '0xc36b', 'rom.time': 28, description: 'Old Resource', date: '2021-03-24T00:00:00Z'},
