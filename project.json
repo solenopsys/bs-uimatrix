@@ -19,72 +19,57 @@
           "packages/fronts/fr-uimatrix/src/favicon.ico",
           "packages/fronts/fr-uimatrix/src/assets",
           {
-            "input": "packages/fr-uimatrix/ui-templates/src/assets",
+            "input": "packages/uimatrix/ui-templates/src/assets",
             "glob": "**/*",
             "output": "assets"
           },
           {
-            "input": "packages/fr-uimatrix/ui-icons/src/assets",
+            "input": "packages/uimatrix/ui-icons/src/assets",
             "glob": "**/*",
             "output": "assets"
           },
           {
-            "input": "packages/fr-uimatrix/ui-charts/src/stories",
+            "input": "packages/uimatrix/ui-charts/src/stories",
             "glob": "**/*",
             "output": "assets/stories/charts"
           },
           {
-            "input": "packages/fr-uimatrix/ui-controls/src/stories",
+            "input": "packages/uimatrix/ui-controls/src/stories",
             "glob": "**/*",
             "output": "assets/stories/controls"
           },
           {
-            "input": "packages/fr-uimatrix/ui-editors/code/src/stories",
-            "glob": "**/*",
-            "output": "assets/stories/editor-code"
-          },
-          {
-            "input": "packages/fr-uimatrix/ui-editors/content/src/stories",
-            "glob": "**/*",
-            "output": "assets/stories/editor-content"
-          },
-          {
-            "input": "packages/fr-uimatrix/ui-editors/electronic/src/stories",
-            "glob": "**/*",
-            "output": "assets/stories/editor-electronic"
-          },
-          {
-            "input": "packages/fr-uimatrix/ui-forms/src/stories",
+            "input": "packages/uimatrix/ui-forms/src/stories",
             "glob": "**/*",
             "output": "assets/stories/forms"
           },
           {
-            "input": "packages/fr-uimatrix/ui-layouts/src/stories",
+            "input": "packages/uimatrix/ui-layouts/src/stories",
             "glob": "**/*",
             "output": "assets/stories/layouts"
           },
           {
-            "input": "packages/fr-uimatrix/ui-lists/src/stories",
+            "input": "packages/uimatrix/ui-lists/src/stories",
             "glob": "**/*",
             "output": "assets/stories/lists"
           },
           {
-            "input": "packages/fr-uimatrix/ui-modals/src/stories",
+            "input": "packages/uimatrix/ui-modals/src/stories",
             "glob": "**/*",
             "output": "assets/stories/modals"
           },
           {
-            "input": "packages/fr-uimatrix/ui-navigate/src/stories",
+            "input": "packages/uimatrix/ui-navigate/src/stories",
             "glob": "**/*",
             "output": "assets/stories/navigate"
           },
           {
-            "input": "packages/fr-uimatrix/ui-publications/src/stories",
+            "input": "packages/uimatrix/ui-publications/src/stories",
             "glob": "**/*",
             "output": "assets/stories/publications"
           },
           {
-            "input": "packages/fr-uimatrix/ui-templates/src/stories",
+            "input": "packages/uimatrix/ui-templates/src/stories",
             "glob": "**/*",
             "output": "assets/stories/templates"
           }

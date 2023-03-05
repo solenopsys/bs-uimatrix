@@ -15,16 +15,7 @@
       "/assets/stories/controls/"
     ]
   },
-  {
-    "name": "Editors",
-    "link": "/components/editors",
-    "icon": "/assets/icons/12-Design/01-Design-Process/design-draw.svg",
-    "submenus": [
-      "/assets/stories/editor-code/",
-      "/assets/stories/editor-content/",
-      "/assets/stories/editor-electronic/"
-    ]
-  },
+
   {
     "name": "Forms",
     "link": "/components/forms",
