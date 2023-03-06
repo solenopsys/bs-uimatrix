@@ -57,7 +57,6 @@ setTimeout(() => {
 export const PROVIDERS_CONF = [
     {provide: "assets_dir", useValue: ""},
     {provide: "mod_name", useValue: "exhibition"},
-    {provide: 'single_start', useValue: true},
     {provide: 'logo', useValue: "matrix"},
     {provide: 'menu', useValue: menu$.asObservable()},
     {provide: 'tabs', useValue: tabs$.asObservable()},

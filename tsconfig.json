@@ -17,9 +17,6 @@
     },
     {
       "path": "packages/fronts/fr-uimatrix/tsconfig.spec.json"
-    },
-    {
-      "path": "packages/fronts/fr-uimatrix/tsconfig.editor.json"
     }
   ],
   "extends": "../../../tsconfig.base.json",
