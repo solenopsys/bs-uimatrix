@@ -6,7 +6,7 @@ import {BehaviorSubject, Subject} from "rxjs";
 @Component({
     selector: 'app-exhibit',
     templateUrl: './exhibit.component.html',
-    styleUrls: ['./exhibit.component.css']
+    styleUrls: ['./exhibit.component.scss']
 })
 export class ExhibitComponent {
     @ViewChild('dynamicComponentContainer', {read: ViewContainerRef}) entry: ViewContainerRef;
