@@ -10,7 +10,7 @@ import * as json5 from 'json5';
 @Component({
     selector: "app-exhibition-list",
     templateUrl: "./exhibition-list.component.html",
-    styleUrls: ["./exhibition-list.component.css"]
+    styleUrls: ["./exhibition-list.component.scss"]
 })
 export class ExhibitionListComponent implements OnInit, OnDestroy {
     config$: Observable<any>;
