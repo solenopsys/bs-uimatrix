@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule, Routes} from "@angular/router";
-import {BootstrapComponent, GridState, UITemplatesModule} from "@solenopsys/ui-templates";
+import {BootstrapComponent, GridState, InterfaceState, SetTabs, UITemplatesModule} from "@solenopsys/ui-templates";
 import {createNgxs} from "@solenopsys/fl-storage";
 import {RowsState, UIListsModule} from "@solenopsys/ui-lists";
 import {CommonModule} from "@angular/common";
@@ -33,6 +33,7 @@ import {UIFormsModule} from "@solenopsys/ui-forms";
 import {UINavigateModule} from "@solenopsys/ui-navigate";
 import {UIChartsModule} from "@solenopsys/ui-charts";
 import {loadMenu, MenuLoader} from "./submenu.service";
+import {Store} from "@ngxs/store";
 
 const routes: Routes = [
     {
@@ -77,7 +78,7 @@ export const PROVIDERS_CONF = [
         UITemplatesModule,
         UIChartsModule,
         RouterModule.forRoot(routes),
-        ...createNgxs(!environment.production, [ClusterState, GridState, RowsState,], true),
+        ...createNgxs(!environment.production, [ClusterState, GridState, RowsState, InterfaceState], true),
     ],
     providers: [...PROVIDERS_CONF],
     declarations: [
@@ -98,9 +99,17 @@ export const PROVIDERS_CONF = [
     bootstrap: [BootstrapComponent]
 })
 export class AppModule {
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private store: Store) {
         loadMenu(http, menu$, URL_MAPPING_SUBJECT)
+        loadTabs(store)
     }
+}
+
+async function loadTabs(store: Store) {
+    store.dispatch(new SetTabs([
+        {id: 'components', title: 'Components'},
+        {id: 'icons', title: 'Icons'},
+        {id: 'themes', title: 'Themes'},]))
 }
 
 export const URL_MAPPING_SUBJECT: BehaviorSubject<{ [key: string]: string }> =

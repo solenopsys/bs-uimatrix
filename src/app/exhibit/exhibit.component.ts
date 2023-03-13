@@ -19,7 +19,7 @@ export class ExhibitComponent {
     @Input()
     storyId: number;
 
-    constructor(private ds: DeclaredService, private resolver: ComponentFactoryResolver) {
+    constructor(private ds: DeclaredService) {
     }
 
     @Input("data")
@@ -29,8 +29,7 @@ export class ExhibitComponent {
         if (this.story) {
             this.ds.getComponent(data.config.package, data.config.component).then((comp: any) => {
                 this.entry.clear();
-                const factory = this.resolver.resolveComponentFactory(comp);
-                const componentRef = this.entry.createComponent(factory);
+                const componentRef = this.entry.createComponent(comp);
                 for (const key in this.story.params) {
                     if (this.config.io[key]['type'] === "class") {
                         //@ts-ignore
