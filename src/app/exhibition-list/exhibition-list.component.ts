@@ -35,7 +35,7 @@ export class ExhibitionListComponent implements OnInit, OnDestroy {
                             const parent = MAPPING[currentUrl]; // stories/charts
 
                             const url = parent + "components/" + name + ".json5";
-                            console.log("PARENT ", url)
+                          //  console.log("PARENT ", url)
                             return firstValueFrom(this.http.get<string>(url, {
                                 // @ts-ignore
                                 responseType: 'text'

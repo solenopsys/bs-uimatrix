@@ -118,9 +118,17 @@ export class AppModule {
         private store: Store, menuLoaderService: MenuLoaderService,
         private colorService: ColorSchemesService) {
 
+
+
+
         menuLoaderService.addProvider("exMenuProvider", new ExbeditMenuProvider(URL_MAPPING_SUBJECT$, http))
+        menuLoaderService.addMapping("components", "exMenuProvider")
+
         menuLoaderService.addProvider("iconMenuProvider", new IconMenuProvider(http))
+        menuLoaderService.addMapping("icons", "iconMenuProvider")
+
         menuLoaderService.addProvider("themesMenuProvider", new ThemesMenuProvider(colorService))
+        menuLoaderService.addMapping("themes", "themesMenuProvider")
 
         loadTabs(store)
         menuInit(store)
@@ -157,7 +165,8 @@ async function menuInit(store: Store) {
 
     store.dispatch(new SetLeftPanel({
         component: 'menu',
-        dataProviderName: "themesMenuProvider"
+        store: "menu",
+        id: "menuIdBla"
     }));
 }
 

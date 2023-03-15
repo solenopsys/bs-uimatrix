@@ -24,7 +24,7 @@ export class MenuResolver {
         item.items = []
 
         for (const submenu of item.submenus) {
-            console.log("PARENT ", item)
+           // console.log("PARENT ", item)
 
             const promise = this.extracted(submenu, item.link, item);
             jobs.push(promise)
@@ -38,16 +38,14 @@ export class MenuResolver {
 
         const promise = this.loader.load(submenu + "index.json").then((resp: any[]) => {
             const subm = resp.map(subItem => {
-                console.log("SUBITEM", subItem);
+               // console.log("SUBITEM", subItem);
                 const uri = parentLink + "/" + subItem.name;
                 URL_MAPPING[parentLink] = submenu
                 URL_MAPPING[uri] = submenu
                 return {"name": subItem.title, "link": uri, "icon": STORY_ICON,}
             })
-            console.log("SUMSUB", subm);
-            item.items.push(...subm)
-
-            //todo
+            //console.log("SUMSUB", subm);
+            item.items?.push(...subm)
         });
         return promise;
     }
