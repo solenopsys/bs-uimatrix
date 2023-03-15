@@ -1,7 +1,7 @@
-import {ExhibitionListComponent} from "./exhibition-list/exhibition-list.component";
-import {ComponentFixture, TestBed} from "@angular/core/testing";
-import {Loader, MenuLoader} from "./submenu.service";
-import {firstValueFrom, Subject} from "rxjs";
+
+import {Subject} from "rxjs";
+import {Loader} from "./types";
+import {MenuResolver} from "./submenu.service";
 
 const meny_json = "[\n" +
     "  {\n" +
@@ -62,21 +62,18 @@ describe('MenuLoader', () => {
 
 
     let dataLoader: MoscLoader;
-    let menuLoader: MenuLoader;
-    const menu$ = new Subject<any>();
+    let menuResolver: MenuResolver;
     const url_mapping$ = new Subject<any>();
 
-    let menu: any;
+
     let url_mapping: any;
 
     beforeEach(async () => {
         dataLoader = new MoscLoader();
-        menuLoader = new MenuLoader(dataLoader, menu$, url_mapping$);
+        menuResolver = new MenuResolver(dataLoader,  url_mapping$);
     });
 
-    menu$.subscribe(value => {
-        menu = value;
-    })
+
 
     url_mapping$.subscribe(value => {
         url_mapping = value;
@@ -84,9 +81,9 @@ describe('MenuLoader', () => {
 
 
     test('should create', async () => {
-        expect(menuLoader).toBeTruthy();
+        expect(menuResolver).toBeTruthy();
 
-        await menuLoader.loadMenu()
+        const menu = await menuResolver.loadMenu()
         expect(dataLoader.queries).toContain("/assets/menu.json");
         expect(dataLoader.queries).toContain("/assets/stories/charts/index.json");
         expect(dataLoader.queries).toContain("/assets/stories/controls/index.json");

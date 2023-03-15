@@ -1,4 +1,6 @@
 {
+  "name": "fr-uimatrix",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "packages/fronts/fr-uimatrix/src",
   "prefix": "app",
@@ -77,7 +79,8 @@
         "styles": [
           "packages/uimatrix/ui-templates/src/assets/styles.scss"
         ],
-        "scripts": []
+        "scripts": [],
+        "webWorkerTsConfig": "packages/fronts/fr-uimatrix/tsconfig.worker.json"
       },
       "configurations": {
         "production": {
@@ -149,7 +152,8 @@
       ],
       "options": {
         "jestConfig": "packages/fronts/fr-uimatrix/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "webWorkerTsConfig": "packages/fronts/fr-uimatrix/tsconfig.worker.json"
       }
     }
   },

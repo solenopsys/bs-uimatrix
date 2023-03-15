@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {NavigationEnd, Router} from '@angular/router';
-import {URL_MAPPING_SUBJECT} from "../app.module";
+import {URL_MAPPING_SUBJECT$} from "../app.module";
 import {Location} from '@angular/common';
 import {filter, firstValueFrom, map, Observable, Subject, Subscription, switchMap, tap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
@@ -28,7 +28,7 @@ export class ExhibitionListComponent implements OnInit, OnDestroy {
 
                 const name = currentUrl.split("/").pop()
                 console.log("NAME ", name)
-                this.config$ = URL_MAPPING_SUBJECT.asObservable().pipe(filter(val => val != undefined))
+                this.config$ = URL_MAPPING_SUBJECT$.asObservable().pipe(filter(val => val != undefined))
                     .pipe(
                         switchMap(MAPPING => {
                             console.log("PRINT MAPPING", MAPPING)
