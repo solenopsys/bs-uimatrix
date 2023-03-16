@@ -12,6 +12,8 @@ export class ExbeditMenuProvider implements MenuLoaderProvider {
 
     load(dataKey: string): Promise<MenuItem[]> {
         return new Promise((resolve, reject) => {
+
+            // todo HttpWebWorkerLoader
             const menuLoader = new MenuResolver(new HttpLoader(this.httpClient), this.mapping$)
             menuLoader.loadMenu().then(menu => {
                 resolve(menu);

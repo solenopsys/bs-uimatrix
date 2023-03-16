@@ -6,7 +6,7 @@ import {MenuResolver} from "./submenu.service";
 import {MenuLoaderProvider} from "@solenopsys/ui-templates";
 
 export class IconMenuProvider implements MenuLoaderProvider {
-    constructor( private httpClient: HttpClient) {
+    constructor(private httpClient: HttpClient) {
 
     }
 
@@ -16,8 +16,8 @@ export class IconMenuProvider implements MenuLoaderProvider {
 
             firstValueFrom(this.httpClient.get('/assets/icons/index.json')).then(icons => {
                 const res = Object.entries(icons).map((entry: any) => {
-                    const name= entry[0].replace(/[-\d]/g, " ");
-                    return {link: entry[0], name } as MenuItem;
+                    const name = entry[0].replace(/[-\d]/g, " ");
+                    return {link: "/icons/" + entry[0], name} as MenuItem;
                 });
 
                 resolve(res);

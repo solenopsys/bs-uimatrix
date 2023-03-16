@@ -10,7 +10,7 @@ export class ThemesMenuProvider implements MenuLoaderProvider {
     load(dataKey: string): Promise<MenuItem[]> {
         return new Promise((resolve, reject) => {
             const res = Object.keys(this.colorSchemeService.schemes).map((key) => {
-                return {link: key, name: key} as MenuItem;
+                return {link:"/themes/"+  key, name: key} as MenuItem;
             })
 
 

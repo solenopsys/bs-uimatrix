@@ -1,9 +1,6 @@
 import {Subject} from "rxjs";
 import {Loader, MenuItem, STORY_ICON, URL_MAPPING} from "./types";
 
-import {HttpLoader} from "../http-loader.service";
-import {HttpClient} from "@angular/common/http";
-
 function wrapItem(item: MenuItem): (subm: []) => void {
     return function (subm: []): void {
         console.log("NEW SUBMENU", item)
@@ -24,7 +21,7 @@ export class MenuResolver {
         item.items = []
 
         for (const submenu of item.submenus) {
-           // console.log("PARENT ", item)
+            // console.log("PARENT ", item)
 
             const promise = this.extracted(submenu, item.link, item);
             jobs.push(promise)
@@ -38,7 +35,7 @@ export class MenuResolver {
 
         const promise = this.loader.load(submenu + "index.json").then((resp: any[]) => {
             const subm = resp.map(subItem => {
-               // console.log("SUBITEM", subItem);
+                // console.log("SUBITEM", subItem);
                 const uri = parentLink + "/" + subItem.name;
                 URL_MAPPING[parentLink] = submenu
                 URL_MAPPING[uri] = submenu
@@ -48,12 +45,6 @@ export class MenuResolver {
             item.items?.push(...subm)
         });
         return promise;
-    }
-
-    loadSubmenus(): Promise<any> {
-        return Promise.all(this.submenuJobs).then(result => {
-            this.url_mapping$.next(URL_MAPPING)
-        })
     }
 
     loadMenu(): Promise<MenuItem[]> {
@@ -68,9 +59,11 @@ export class MenuResolver {
                     this.submenuJobs.push(...promises)
                 }
 
-                const newVar = this.loadSubmenus();
-
-                resolve(menuItems)
+                const newVar = Promise.all(this.submenuJobs)
+                    .then(result => {
+                        this.url_mapping$.next(URL_MAPPING)
+                        resolve(menuItems)
+                    })
             }).catch(err => {
                 reject(err)
             })
