@@ -3,6 +3,6 @@
   "version": "0.1.1",
   "scripts": {
     "test": "node index.js",
-    "build": "etsc -p tsconfig.lib.json"
+    "build": "etsc"
   }
 }
