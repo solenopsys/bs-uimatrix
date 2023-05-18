@@ -6,7 +6,7 @@
   "prefix": "app",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:browser-esbuild",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -108,10 +108,9 @@
         "development": {
           "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
+
           "extractLicenses": false,
-          "sourceMap": true,
-          "namedChunks": true
+          "sourceMap": true
 
         }
       },
@@ -148,9 +147,7 @@
       ],
       "options": {
         "jestConfig": "packages/fronts/fr-uimatrix/jest.config.ts",
-        "passWithNoTests": true,
-        "webWorkerTsConfig": "packages/fronts/fr-uimatrix/tsconfig.worker.json"
-      }
+        "passWithNoTests": true}
     }
   },
   "tags": []
