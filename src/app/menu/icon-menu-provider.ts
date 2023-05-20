@@ -1,9 +1,7 @@
-import {firstValueFrom, Subject} from "rxjs";
+import {firstValueFrom} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {MenuItem} from "./types";
-import {HttpLoader} from "../http-loader.service";
-import {MenuResolver} from "./submenu.service";
 import {MenuLoaderProvider} from "@solenopsys/ui-templates";
+import {MenuItem} from "@solenopsys/ui-navigate";
 
 export class IconMenuProvider implements MenuLoaderProvider {
     constructor(private httpClient: HttpClient) {

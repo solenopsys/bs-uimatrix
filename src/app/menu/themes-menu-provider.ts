@@ -1,6 +1,6 @@
-import {MenuItem} from "./types";
 import {MenuLoaderProvider} from "@solenopsys/ui-templates";
 import {ColorSchemesService} from "@solenopsys/ui-themes";
+import {MenuItem} from "@solenopsys/ui-navigate";
 
 export class ThemesMenuProvider implements MenuLoaderProvider {
     constructor(private colorSchemeService: ColorSchemesService) {
