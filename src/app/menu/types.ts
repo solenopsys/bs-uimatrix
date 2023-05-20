@@ -4,13 +4,7 @@ export const STORY_ICON = "/assets/icons/04-Programing-Apps-Websites/02-Plugins-
 export const URL_MAPPING: { [key: string]: string } = {}
 
 
-export interface MenuItem {
-    name: string;
-    link: string;
-    icon: string;
-    submenus: string[]
-    items: any[]
-}
+
 
 export interface Loader {
     load(url: string): Promise<any>

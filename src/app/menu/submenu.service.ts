@@ -1,5 +1,6 @@
 import {Subject} from "rxjs";
-import {Loader, MenuItem, STORY_ICON, URL_MAPPING} from "./types";
+import {Loader,  STORY_ICON, URL_MAPPING} from "./types";
+import {MenuItem} from "@solenopsys/ui-navigate";
 
 function wrapItem(item: MenuItem): (subm: []) => void {
     return function (subm: []): void {
