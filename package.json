@@ -1,8 +1,22 @@
 {
   "name": "@solenopsys/fr-uimatrix",
   "version": "0.1.1",
-  "scripts": {
-    "test": "node index.js",
-    "build": "etsc"
+  "dependencies": {
+    "@solenopsys/fl-uimatrix": "^0.1.0",
+    "@solenopsys/fl-dgraph": "^0.1.0",
+    "@solenopsys/fl-globals": "^0.1.0",
+    "@solenopsys/fl-storage": "^0.1.0",
+    "@solenopsys/ui-charts": "^0.1.0",
+    "@solenopsys/ui-controls": "^0.1.0",
+    "@solenopsys/ui-forms": "^0.1.0",
+    "@solenopsys/ui-icons": "^0.1.0",
+    "@solenopsys/ui-lists": "^0.1.0",
+    "@solenopsys/ui-modals": "^0.1.0",
+    "@solenopsys/ui-navigate": "^0.1.0",
+    "@solenopsys/ui-templates": "^0.1.0",
+    "@solenopsys/ui-themes": "^0.1.0",
+    "@solenopsys/ui-utils": "^0.1.0",
+
+    "json5": "^2.2.3"
   }
 }
