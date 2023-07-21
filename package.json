@@ -2,7 +2,7 @@
   "name": "@solenopsys/fr-uimatrix",
   "version": "0.1.1",
   "dependencies": {
-    "@solenopsys/fl-uimatrix": "^0.1.0",
+    "@solenopsys/fl-uimatrix": "workspace:^",
     "@solenopsys/fl-dgraph": "^0.1.0",
     "@solenopsys/fl-globals": "^0.1.0",
     "@solenopsys/fl-storage": "^0.1.0",
