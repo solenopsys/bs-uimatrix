@@ -1,0 +1,14 @@
+{
+  "layout": {
+    "module": "@solenopsys/mf-layout",
+    "data": {
+      "navigate": {},
+      "logo": "/endpoints/solenopsys/fr-uimatrix/assets/logo.svg",
+      "favicon": "/endpoints/solenopsys/fr-uimatrix/assets/favicon.svg",
+      "title": "UI Matrix"
+    }
+  },
+  "routes": {
+
+  }
+}
